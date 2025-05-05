@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
