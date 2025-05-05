@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ContactModal = ({ onClose }) => {
-  const [form, setForm] = useState({ email: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
 
   // Close on ESC key
@@ -31,7 +31,7 @@ const ContactModal = ({ onClose }) => {
 
       if (res.ok) {
         setStatus('Message sent ✅');
-        setForm({ email: '', message: '' });
+        setForm({ name: '', email: '', message: '' });
       } else {
         setStatus('Something went wrong ❌');
       }
@@ -59,6 +59,15 @@ const ContactModal = ({ onClose }) => {
         >
           <h2 className="text-xl font-semibold mb-4">Send me a message</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              className="w-full bg-transparent border border-white/20 px-4 py-2 rounded text-white placeholder-zinc-400"
+            />
             <input
               type="email"
               name="email"
