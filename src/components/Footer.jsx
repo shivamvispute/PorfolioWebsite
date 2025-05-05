@@ -13,10 +13,10 @@ const Footer = () => {
             Helping you build seamless full-stack experiences.
           </p>
           <div className="flex gap-6 text-zinc-400">
-            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+            <a href="https://github.com/shivamvispute" target="_blank" rel="noreferrer">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/shivam-vispute/" target="_blank" rel="noreferrer">
               <Linkedin size={24} />
             </a>
           </div>
